@@ -1,0 +1,67 @@
+[
+  {
+    "text": "Choose the correct form of the verb: 'If I _____ (know) about the meeting, I would have attended.'",
+    "options": ["knew", "had known", "have known", "would know"],
+    "correctAnswer": "had known"
+  },
+  {
+    "text": "Select the word that best completes the sentence: 'The company's new policy was met with _____ from the employees.'",
+    "options": ["apathy", "enthusiasm", "indifference", "resistance"],
+    "correctAnswer": "resistance"
+  },
+  {
+    "text": "Identify the grammatically correct sentence:",
+    "options": [
+      "Neither of the candidates have withdrawn from the race.",
+      "Neither of the candidates has withdrawn from the race.",
+      "Neither of the candidates is withdrawn from the race.",
+      "Neither of the candidates are withdrawn from the race."
+    ],
+    "correctAnswer": "Neither of the candidates has withdrawn from the race."
+  },
+  {
+    "text": "Choose the correct word to complete the idiom: 'The politician's statement was taken out of _____.'",
+    "options": ["context", "proportion", "sight", "mind"],
+    "correctAnswer": "context"
+  },
+  {
+    "text": "Select the correct meaning of the phrasal verb 'to call off':",
+    "options": ["to invite", "to postpone", "to cancel", "to challenge"],
+    "correctAnswer": "to cancel"
+  },
+  {
+    "text": "Choose the correct word to fill in the blank: 'The scientist's _____ research led to a breakthrough in cancer treatment.'",
+    "options": ["groundbreaking", "groudbreaking", "groundbraking", "groundbreking"],
+    "correctAnswer": "groundbreaking"
+  },
+  {
+    "text": "Identify the sentence with correct subject-verb agreement:",
+    "options": [
+      "The quality of the products have improved.",
+      "The quality of the products has improved.",
+      "The quality of the products is improved.",
+      "The quality of the products are improved."
+    ],
+    "correctAnswer": "The quality of the products has improved."
+  },
+  {
+    "text": "Choose the correct form of the adjective: 'This is the _____ book I've ever read.'",
+    "options": ["more interesting", "most interesting", "interestingest", "much interesting"],
+    "correctAnswer": "most interesting"
+  },
+  {
+    "text": "Select the correct passive voice for the sentence: 'They are repairing the bridge.'",
+    "options": [
+      "The bridge is being repaired.",
+      "The bridge is repairing.",
+      "The bridge was repaired.",
+      "The bridge has been repaired."
+    ],
+    "correctAnswer": "The bridge is being repaired."
+  },
+  {
+    "text": "Choose the correct word to complete the sentence: 'Despite his _____, he managed to complete the project on time.'",
+    "options": ["diligence", "negligence", "prudence", "reticence"],
+    "correctAnswer": "negligence"
+  }
+]
