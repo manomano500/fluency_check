@@ -19,6 +19,7 @@ import { defineComponent } from 'vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Navigation from '@/components/Navigation.vue'
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   name: 'MainLayout',
@@ -26,8 +27,24 @@ export default defineComponent({
     Header,
     Footer,
     Navigation
+  },
+  setup() {
+    useHead({
+      title: 'Test Your English Level - FluencyCheck',
+      meta: [
+        {
+          name: 'description',
+          content: 'Take our online English proficiency test to determine your CEFR level with FluencyCheck.',
+        },
+        {
+          name: 'keywords',
+          content: 'English proficiency test, language assessment, CEFR level, fluency check, language skills evaluation',
+        }
+      ],
+    });
   }
 })
+
 </script>
 
 <style>
