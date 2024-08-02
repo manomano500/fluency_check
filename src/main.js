@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './assets/tailwind.css'
 import { createHead } from '@vueuse/head';
+import { auth } from './firebase'
 
 
 const head = createHead();

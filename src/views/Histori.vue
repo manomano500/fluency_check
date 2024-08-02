@@ -23,20 +23,29 @@
   </div>
 </template>
 
+<!-- src/views/History.vue -->
 <script>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import questions from '@/data/questions.json'
 
 export default {
-  name: 'History',
+  name: 'Histori',
   setup() {
     const store = useStore()
     const answerHistory = computed(() => store.getters.getAnswerHistory)
+    const isAuthenticated = computed(() => store.getters.isAuthenticated)
+
+    onMounted(() => {
+      if (isAuthenticated.value) {
+        store.dispatch('loadUserHistory')
+      }
+    })
 
     return {
       answerHistory,
-      questions
+      questions,
+      isAuthenticated
     }
   }
 }

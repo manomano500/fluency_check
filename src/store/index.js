@@ -1,7 +1,12 @@
 import { createStore } from 'vuex'
+import { db } from '@/firebase'
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore'
+
 
 export default createStore({
   state: {
+    user: null
+,
     currentQuestion: 0,
     answers: [],
     testCompleted: false,
@@ -10,6 +15,9 @@ export default createStore({
 
   },
   mutations: {
+    setUser(state, user) {
+      state.user = user
+    },
     setCurrentQuestion(state, questionIndex) {
       state.currentQuestion = questionIndex
     },
@@ -37,7 +45,7 @@ export default createStore({
       commit('addAnswer', answer)
       commit('setCurrentQuestion', state.currentQuestion + 1)
     },
-    finishTest({ commit, state }) {
+    async finishTest({ commit, state }) {
       commit('completeTest')
       // Calculate proficiency level based on answers
       const correctAnswers = state.answers.filter(a => a.correct).length
@@ -59,12 +67,27 @@ export default createStore({
         answers: state.answers
       }
       commit('addToHistory', testResult)
-    }
-  },
+
+
+      if (state.user) {
+        try {
+          await addDoc(collection(db, 'testHistory'), {
+            userId: state.user.uid,
+            ...testResult
+          })
+        } catch (error) {
+          console.error('Error saving test result:', error)
+        }
+      }
+    },
+    },
+
 
 
   getters: {
     getAnswerHistory: (state) => state.answerHistory
+,
+    isAuthenticated: (state) => !!state.user
 ,
     getCurrentQuestion: (state) => state.currentQuestion,
     getAnswers: (state) => state.answers,
