@@ -5,7 +5,7 @@
 
     <Navigation />
     <div class="container mx-auto px-4 py-2 ">
-      <Auth />
+
     </div>
 
     <main class="flex-grow container mx-auto px-4 py-8">
@@ -24,7 +24,7 @@ import { defineComponent } from 'vue'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import Navigation from '@/components/Navigation.vue'
-import Auth from '@/components/Auth.vue'
+// import Auth from '@/components/Auth.vue'
 
 export default defineComponent({
   name: 'MainLayout',
@@ -32,7 +32,7 @@ export default defineComponent({
     Header,
     Footer,
     Navigation,
-    Auth
+    // Auth
   }
 })
 </script>
