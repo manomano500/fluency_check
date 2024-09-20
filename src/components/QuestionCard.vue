@@ -10,7 +10,7 @@
           :value="option"
           v-model="selectedAnswer"
           class="mr-2 h-5 w-5 text-joyful-green focus:ring-joyful-green"
-        >
+        />
         <label :for="'option-' + index" class="text-lg">{{ option }}</label>
       </div>
     </div>
@@ -23,8 +23,6 @@
     </button>
   </div>
 </template>
-
-
 
 <script>
 import { ref } from 'vue'
