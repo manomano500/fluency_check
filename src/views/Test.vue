@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <h1 class="text-3xl font-bold mb-6 text-white text-center">English Proficiency Test</h1>
+    <h1 class="text-3xl font-bold mb-6 text-blue-950 text-center">English Proficiency Test</h1>
 
     <div class="mb-8">
       <div class="bg-white bg-opacity-30 rounded-full h-4 w-full">
@@ -9,7 +9,7 @@
           :style="{ width: `${(currentQuestion / questions.length) * 100}%` }"
         ></div>
       </div>
-      <p class="text-white text-center mt-2">
+      <p class="text-blue-950 text-center mt-2">
         Question {{ currentQuestion + 1 }} of {{ questions.length }}
       </p>
     </div>
